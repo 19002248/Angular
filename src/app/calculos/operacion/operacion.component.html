@@ -1,0 +1,17 @@
+<div>
+    numero1: <input type="text" [(ngModel)]="numero1" name="numero1"><br>
+    numero2: <input type="text" [(ngModel)]="numero2" name="numero2"><br>
+    Escoge la operción que quieres realizar: <br>
+    Instrucciones: <br>
+    ingressa en el cuadro de texto lo siguiente de acuerdo a lo que queiras hacer:<br>
+    s - sumar<br>
+    r - restar<br>
+    m - multiplicar<br>
+    d - dividir<br>
+
+    Elección: <input type="text" [(ngModel)]="tepsto" name="eleccion"><br>
+   
+    <button type="button" (click)="operacion()">Calcular</button>
+
+    <h1>{{total}}</h1>
+</div>
