@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        Lista de productos:
+    </div>
+    <div class="card-body">
+     <div class="row" >
+        <div class="h5 col-md-2">Filtrar por: </div>
+        <div class="col-md-4">
+            <input [(ngModel)]="listFilter" type="text" class="form-control" name="filter">
+        </div>
+
+     </div>
+     <div class="row">
+        <div class="col-md-6"> 
+            <h4>Filtro:</h4>
+        </div>
+     </div>
+     <div class="table-responsive">
+        <table class="table table-bordered" *ngIf="products.length">
+            <thead class="">
+                <tr>
+                    <th>
+                        <button (click)="muestraImagen()" type="button" class="btn btn-primary"> {{muestraIMG? 'Ocultar ':'Mostrar '}} Imagen </button>
+                    </th>
+                    <th >Nombre</th>
+                    <th >Descripción</th>
+                    <th >Modelo</th>
+                    <th >Precio</th>
+                    <th >Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ngFor nos ayuda a hacer un recorrido dentro de la lista que creamos-->
+                <tr *ngFor="let product of products">
+                    <td>
+                        <img *ngIf="muestraIMG" [src]="product.imageURL"
+                        [title]="product.productName"
+                        [style.width.px]="imageWidth"
+                        [style.margin.px]="imageMarge">
+                    </td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.descripcion}}</td>
+                    <td>{{product.createDate}}</td>
+                    <td>{{product.precio}}</td>
+                    <td>{{product.rating}}</td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+
+    </div>
+</div>
