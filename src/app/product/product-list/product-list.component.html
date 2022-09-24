@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        Lista de productos:
+        Lista de productos
     </div>
     <div class="card-body">
      <div class="row" >
@@ -31,17 +31,18 @@
             </thead>
             <tbody>
                 <!-- ngFor nos ayuda a hacer un recorrido dentro de la lista que creamos-->
-                <tr *ngFor="let product of products">
+                <tr *ngFor="let product of products | productoFilter:listFilter">
+                                                     <!--este es un pipe, junto con el parámetro que va a buscar-->
                     <td>
                         <img *ngIf="muestraIMG" [src]="product.imageURL"
                         [title]="product.productName"
                         [style.width.px]="imageWidth"
                         [style.margin.px]="imageMarge">
                     </td>
-                    <td>{{product.productName}}</td>
+                    <td>{{product.productName | uppercase}}</td>
                     <td>{{product.descripcion}}</td>
-                    <td>{{product.createDate}}</td>
-                    <td>{{product.precio}}</td>
+                    <td>{{product.createDate |date:'dd/MM/yy'}}</td>
+                    <td>{{product.precio |currency}}</td>
                     <td>{{product.rating}}</td>
                 </tr>
             </tbody>
