@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
+import { TablaComponent } from './calculos/tabla/tabla.component';
+import { CinemaComponent } from './calculos/cinema/cinema.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MatButtonModule} from '@angular/material/button';
     OperacionComponent,
     ProductListComponent,
     ProductoFilterPipe,
-    MenuComponent
+    MenuComponent,
+    TablaComponent,
+    CinemaComponent
   ],
   imports: [
     BrowserModule,
