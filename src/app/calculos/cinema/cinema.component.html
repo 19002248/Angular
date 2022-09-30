@@ -1,1 +1,22 @@
-<p>cinema works!</p>
+<body>
+    <div>Compra de Entradas</div>
+    Nombre: <input type="text" [(ngModel)]="nombree"><br>
+    Cantidad compradores: <input type="text" [(ngModel)]="compradores"><br>
+    
+    Tarjeta Cineco: <br>
+    s - Se cuenta con tarjeta <br>
+    n - No se cuenta con tarjeta <br>
+    <input type="text" [(ngModel)]="tarjetaCine"><br>
+
+    Cantidad de boletas: <input type="text" [(ngModel)]="ciboletas"><br> <br>
+
+   <div>Total para {{comprador}}:</div>
+    Total a pagar: <div>{{pagar}}</div> <br>
+    <!-- 
+        Preguntar para cómo condicionar el mensaje de error
+    -->
+    <div >{{mensajeerror}}</div>
+    <br><br>
+
+    <button type="button" (click)="totalPago()">Calcular</button>
+</body>
