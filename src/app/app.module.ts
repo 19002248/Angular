@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule} from '@angular/material/button';
 import { TablaComponent } from './calculos/tabla/tabla.component';
 import { CinemaComponent } from './calculos/cinema/cinema.component';
+import { ResistenciasComponent } from './calculos/resistencias/resistencias.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CinemaComponent } from './calculos/cinema/cinema.component';
     ProductoFilterPipe,
     MenuComponent,
     TablaComponent,
-    CinemaComponent
+    CinemaComponent,
+    ResistenciasComponent
   ],
   imports: [
     BrowserModule,

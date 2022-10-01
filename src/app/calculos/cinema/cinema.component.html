@@ -1,22 +1,64 @@
-<body>
-    <div>Compra de Entradas</div>
-    Nombre: <input type="text" [(ngModel)]="nombree"><br>
-    Cantidad compradores: <input type="text" [(ngModel)]="compradores"><br>
+<body class="container">
+    <div class="h1 row justify-content-md-center">Compra de Entradas</div> <br>
+    <div class="row">
+    <div class="col-6">
+        <label for="nom" class="form-label">Nombre:</label>
+   <input class="form-control" id="nom" type="text" [(ngModel)]="nombree"><br>
+   <label for="cant" class="form-label"> Cantidad compradores:</label>
+    <input class="form-control" id="cant" type="text" [(ngModel)]="compradores"><br>
     
     Tarjeta Cineco: <br>
+   <!-- 
     s - Se cuenta con tarjeta <br>
     n - No se cuenta con tarjeta <br>
+
     <input type="text" [(ngModel)]="tarjetaCine"><br>
-
-    Cantidad de boletas: <input type="text" [(ngModel)]="ciboletas"><br> <br>
-
+ --> 
+ <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="tarSi" id="1" value="s"  [(ngModel)]="tarjetaCine">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Si
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="tarNo" id="2" value="n" [(ngModel)]="tarjetaCine">
+    <label class="form-check-label" for="flexRadioDefault2">
+      No
+    </label>
+  </div> <br> <br>
+   <!-- <div>
+      Si:  <input  >
+      No:  <input >
+    </div> <br>-->
+    <label for="cib" class="form-label">  Cantidad de boletas:</label>
+   <input class="form-control" id="cib" type="text" [(ngModel)]="ciboletas"><br> <br>
+    </div>
+    <!-- 
    <div>Total para {{comprador}}:</div>
     Total a pagar: <div>{{pagar}}</div> <br>
-    <!-- 
+    
         Preguntar para cómo condicionar el mensaje de error
-    -->
+    
     <div >{{mensajeerror}}</div>
     <br><br>
+    -->
 
-    <button type="button" (click)="totalPago()">Calcular</button>
+    <div class="col-6 h3">
+        <div class="h4 text-end"> Costo del boleto: $12</div> <br>
+        <div class="h4 text-end"> Promociones:</div> 
+        <div class="h5 text-end"> 2 boletas no hay descuento <br>
+            de 3 a 5 = 10% de descuento <br>
+            más de 5 boletas = 15% de descuento
+            </div> <br>
+        <div class="h4 text-end"> Total:</div> 
+        <div class="h5 text-end"> {{mensaje}} </div>
+        
+    
+    </div> <br>
+</div>
+<div class="row">
+    
+    <button type="button" class="btn btn-lg btn-primary justify-content-md-center " (click)="totalPago()"> Calcular</button>
+</div>
+    
 </body>
